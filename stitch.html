@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Micronutrient Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df293",
+              "background-light": "#f5f8f7",
+              "background-dark": "#10221b",
+            },
+            fontFamily: {
+              "display": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px 2px rgba(13, 242, 147, 0.3); }
+            50% { box-shadow: 0 0 40px 10px rgba(13, 242, 147, 0.6); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .animate-pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 242, 147, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<div class="relative flex h-screen w-full flex-col justify-between overflow-hidden px-6 py-12 max-w-md mx-auto">
+<!-- Top Visual Section -->
+<div class="flex flex-col items-center justify-center pt-10">
+<!-- Glowing Circular Icon -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
+<div class="relative w-32 h-32 flex items-center justify-center bg-white dark:bg-slate-800 rounded-full animate-pulse-glow animate-float border-4 border-primary/10">
+<span class="material-symbols-outlined text-primary text-6xl" style="font-variation-settings: 'FILL' 1">
+                        eco
+                    </span>
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col gap-6 text-center mt-8">
+<h1 class="text-4xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
+                Check Your <br/>
+<span class="text-primary">Nutrient</span> Deficiencies
+            </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-medium">
+                Discover what your body needs based on your symptoms, diet, and current supplements.
+            </p>
+</div>
+<!-- Glassmorphic List Items -->
+<div class="flex flex-col gap-4 mt-10">
+<!-- Item 1 -->
+<div class="glass-card rounded-2xl p-5 flex items-center gap-4 shadow-sm">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">
+                        monitoring
+                    </span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-800 dark:text-slate-100 leading-none mb-1">AI-powered analysis</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Deep-learning health scan</p>
+</div>
+<div class="ml-auto">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="glass-card rounded-2xl p-5 flex items-center gap-4 shadow-sm">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">
+                        restaurant
+                    </span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-800 dark:text-slate-100 leading-none mb-1">Personalized plan</p>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Food &amp; supplement roadmap</p>
+</div>
+<div class="ml-auto">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<div class="mt-auto pt-10 pb-4">
+<button class="w-full h-16 bg-primary text-slate-900 font-bold text-lg rounded-2xl shadow-[0_10px_30px_-10px_rgba(13,242,147,0.8)] active:scale-[0.98] transition-all duration-150 flex items-center justify-center gap-2 group">
+                Get Started
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                </span>
+</button>
+<p class="text-center text-slate-400 dark:text-slate-600 text-sm mt-4">
+                Already have an account? <span class="text-primary font-semibold">Sign In</span>
+</p>
+</div>
+</div>
+<!-- Background Elements -->
+<div class="fixed -top-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+<div class="fixed -bottom-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+</body></html>
